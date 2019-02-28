@@ -17,16 +17,13 @@ public class FernandezTrevorAhorcado {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       Palabra palabra = new Palabra("Boca boca");
-       int index;
+       Palabra palabra = new Palabra("San Martin de San Juan");
        int contador=6;
        Scanner lector = new Scanner(System.in);
        String ingreso;
        String auxiliar = palabra.getPalabra();
        String oculto = Palabra.ocultarPalabra(palabra.getPalabra());
-       
-       
-       
+       oculto = palabra.decubrirLetra(" ", oculto, palabra.getPalabra());
 
         auxiliar = auxiliar.toLowerCase();
         
@@ -39,8 +36,7 @@ public class FernandezTrevorAhorcado {
         
         if(auxiliar.contains(ingreso)){
             
-            oculto = palabra.decubrirLetra(ingreso, oculto, auxiliar);
-            
+            oculto = palabra.decubrirLetra(ingreso, oculto, auxiliar);            
    
         }else{
             System.out.println("Fallaste!");
