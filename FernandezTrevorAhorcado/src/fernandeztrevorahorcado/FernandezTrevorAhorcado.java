@@ -17,7 +17,7 @@ public class FernandezTrevorAhorcado {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       Palabra palabra = new Palabra("Boca");
+       Palabra palabra = new Palabra("Boca boca");
        int index;
        int contador=6;
        Scanner lector = new Scanner(System.in);

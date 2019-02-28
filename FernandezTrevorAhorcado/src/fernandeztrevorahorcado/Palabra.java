@@ -34,24 +34,23 @@ public class Palabra {
    }
    
    public String decubrirLetra(String ingreso, String oculto, String palabra){
-       StringBuilder retorno = new StringBuilder();       
+       StringBuilder retorno = new StringBuilder();
        int index;
-       //String retorno;
-       /*for(int i = 0; i < palabra.length(); i++){
+              
+       retorno.append(oculto);
+       
+       for(int i = 0; i < palabra.length(); i++){
            
            if(Character.compare(ingreso.charAt(0), palabra.charAt(i)) == 0){
             retorno.insert(i, ingreso);
             retorno.deleteCharAt(i+1);   
            }         
-       }*/
+       }
        
        index = palabra.indexOf(ingreso);
-       System.out.println(ingreso+oculto+palabra+index);
        retorno.insert(index, ingreso);
        retorno.deleteCharAt(index+1);
        
        return retorno.toString();
    }
-   
-
 }
